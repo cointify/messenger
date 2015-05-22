@@ -42,12 +42,22 @@ public class CreateMessageActivity extends ActionBarActivity {
     }
 
     public void onClickSendMessage(View view) {
-        Intent intent = new Intent(this, ReceiveMessageActivity.class);
+//        Intent intent = new Intent(this, ReceiveMessageActivity.class);
+//
+//        EditText editText = (EditText) findViewById(R.id.message);
+//        String message = String.valueOf(editText.getText());
+//
+//        intent.putExtra(USER_MESSAGE, message);
+//        startActivity(intent);
+
+        Intent intent = new Intent(Intent.ACTION_SEND);
 
         EditText editText = (EditText) findViewById(R.id.message);
         String message = String.valueOf(editText.getText());
 
-        intent.putExtra(USER_MESSAGE, message);
+        intent.setType("text/plain");
+        intent.putExtra(Intent.EXTRA_TEXT, message);
+
         startActivity(intent);
     }
 }
