@@ -16,6 +16,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".ReceiveMessageActivity"
+            android:label="@string/title_activity_receive_message"
+            android:parentActivityName=".CreateMessageActivity">
+        </activity>
     </application>
 
 </manifest>
